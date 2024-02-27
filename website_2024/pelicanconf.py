@@ -37,6 +37,13 @@ SOCIAL = (
     ("Fediverse", "https://tooot.im/@pyconil/"),
 )
 
+class PYCON:
+    YEAR = 2024
+    DATES = "16.9.2024"
+    LOCATION = "Ben Gurion University"
+
+    SPONSORSHIP_AVAILABLE = True
+
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
