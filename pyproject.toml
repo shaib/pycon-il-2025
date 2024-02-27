@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 pelican = {extras = ["markdown"], version = "^4.9.1"}
+pelican-image-process = "^3.0.3"
 
 
 [build-system]

@@ -22,10 +22,10 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+#    ("Pelican", "https://getpelican.com/"),
+#    ("Python.org", "https://www.python.org/"),
+#    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+#    ("You can modify those links in your config file", "#"),
 )
 
 # Social widget
@@ -34,7 +34,7 @@ SOCIAL = (
     ("YouTube", "https://www.youtube.com/@PyConIsrael"),
     ("Facebook", "https://"),
     ("LinkedIn", "https://www.linkedin.com/company/pycon-israel/"),
-    ("Fediverse", "https://tooot.im/@pyconil/"),
+    ("Mastodon", "https://tooot.im/@pyconil/"),
 )
 
 class PYCON:
@@ -51,3 +51,5 @@ RELATIVE_URLS = True
 
 THEME = "themes/PyCon-Israel-Flex"
 STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
+
+IMAGE_PROCESS = {}
