@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "website-2024"
+version = "0.1.0"
+description = "PyCon Israel 2024 website"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pelican = {extras = ["markdown"], version = "^4.9.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
