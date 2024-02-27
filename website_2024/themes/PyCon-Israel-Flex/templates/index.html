@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.index_top %}
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle ads-responsive"
+       data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}"
+       data-ad-slot="{{ GOOGLE_ADSENSE.ads.index_top }}"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+{% endif %}
+
+<h1>PyCon Israel {{ PYCON.YEAR }}</h1>
+<h3>{{ PYCON.DATES }}</h3>
+<h3>{{ PYCON.LOCATION }}</h3>
+<header>
+  <h2>About PyCon Israel</h2>
+</header>
+<div>
+  PyCon Israel 2023 included two days – a day of talks at Wohl Center,
+  and a day of workshops at the Microsoft Reactor. Two days of
+  learning and socializing, fun and collaboration, all around Python.
+</div>
+<header>
+  <h2>Sponsorships</h2>
+</header>
+<div class="sponsorship">
+  <p class="sponsors"> Here be sponsors </p>
+  {% if PYCON.SPONSORSHIP_AVAILABLE -%}
+  <p class="call-for-more">Become a sponsor </p>
+  {% endif %}
+</div>
+{% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.index_bottom %}
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle ads-responsive"
+       data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}"
+       data-ad-slot="{{ GOOGLE_ADSENSE.ads.index_bottom }}"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+{% endif %}
+
+{% endblock %}
