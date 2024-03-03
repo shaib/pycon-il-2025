@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block htmltag %}<html lang="{{ page.lang|default(DEFAULT_LANG) }}">{% endblock %}
+
 {% block meta %}
 {{ super() }}
 
