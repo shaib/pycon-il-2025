@@ -40,7 +40,7 @@ SOCIAL = (
 class PYCON:
     YEAR = 2024
     DATES = "16.9.2024"
-    LOCATION = "Ben Gurion University"
+    LOCATION = "Cinema City, Gelilot"
 
     SPONSORSHIP_AVAILABLE = True
 
