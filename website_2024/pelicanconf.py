@@ -53,3 +53,21 @@ THEME = "themes/PyCon-Israel-Flex"
 STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
 
 IMAGE_PROCESS = {}
+
+PLUGINS = ['i18n_subsites']
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.i18n'],
+}
+
+INDEX_SAVE_AS = 'blog_index.html'
+
+I18N_SUBSITES = {
+    'he': {
+        'SITENAME': 'פייקון ישראל 2024',
+        'SITESUBTITLE': (
+            'פייקון ישראל הוא כנס המוקדש לשפת התכנות פייתון, '
+            'לטכנולוגיות הקשורות אליה, ולשימוש בהן'
+        ),
+
+    }
+}

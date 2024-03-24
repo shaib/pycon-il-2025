@@ -375,6 +375,23 @@ watchfiles = ">=0.21.0"
 markdown = ["markdown (>=3.1)"]
 
 [[package]]
+name = "pelican-i18n-subsites"
+version = "0.9.0"
+description = "Pelican plugin to create internationalized sub-sites"
+optional = false
+python-versions = ">=3.6.2,<4.0"
+files = [
+    {file = "pelican-i18n-subsites-0.9.0.tar.gz", hash = "sha256:b98e1ffb430b27d16dddfccae654d681ce3b97d8c8be2c274992ba7ab362158d"},
+    {file = "pelican_i18n_subsites-0.9.0-py3-none-any.whl", hash = "sha256:087486ed3505ef84a1a751ef8e56f84771050e94a9ef15d3dd804ca576d113fa"},
+]
+
+[package.dependencies]
+pelican = ">=4.5"
+
+[package.extras]
+markdown = ["markdown (>=3.2)"]
+
+[[package]]
 name = "pelican-image-process"
 version = "3.0.3"
 description = "Pelican plugin that automates image processing."
@@ -683,4 +700,4 @@ anyio = ">=3.0.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6e8c3ca01699a5768d634bbe852bf2969726520958131306c5a13e5fe122e618"
+content-hash = "48e0585fba56c57e6355bc1e5e28e99aecbff0032f652a3b1261be81f4caf423"

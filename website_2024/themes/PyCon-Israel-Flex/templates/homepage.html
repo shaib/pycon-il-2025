@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block htmltag %}<html lang="{{ page.lang|default(DEFAULT_LANG) }}">{% endblock %}
+
+{% block meta %}
+{{ super() }}
+
+{% if page.translations -%}
+<link rel="alternate" href="{{ SITEURL }}/{{ page.url }}" hreflang="{{ page.lang }}" />
+{% for p in page.translations %}
+<link rel="alternate" href="{{ lang_siteurls[p.lang] }}/{{ p.url }}" hreflang="{{ p.lang }}" />
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block title %} &ndash; {{ page.title|striptags|escape }}{% endblock %}
+
+{% block content %}
+<article class="single">
+  <header>
+    <h1 id="{{ page.slug }}">PyCon Israel {{ PYCON.YEAR }}</h1>
+    <h3><time datetime="2024-09-16">16.9.2024</time></h3>
+    <h3>Cinema City, Gelilot</h3>
+  </header>
+  <div>
+    <section id="about">
+      <h2>About PyCon Israel</h2>
+      <p>
+	PyCon Israel 2024 will include a day of talks at Cinema City,
+	Gelilot, and a day of workshops (location to be announced).
+	Two days of learning and socializing, fun and collaboration,
+	all around Python.
+      </p>
+    </section>
+    <section id="sponsorships">
+      <h2>Sponsorships</h2>
+      <p class="call-for-sponsors">Become a Sponsor!</p>
+      <div class="gold-sponsor">
+	<p></p>
+      </div>
+      <div class="silver-sponsor">
+	<p></p>
+      </div>
+    </section>
+  </div>
+</article>
+{% endblock %}
