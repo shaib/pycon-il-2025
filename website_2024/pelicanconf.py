@@ -78,3 +78,8 @@ I18N_SUBSITES = {
 
     }
 }
+
+LANGUAGE_NAMES = {
+    'en': "English",
+    'he': "עברית",
+}

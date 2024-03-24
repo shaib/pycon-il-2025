@@ -1,4 +1,13 @@
 <aside>
+  <div class="translations">
+    <bdi>
+      <a class="active" href="{{ SITEURL }}">{{LANGUAGE_NAMES[DEFAULT_LANG]}}</a>
+    </bdi>
+    {% for lang,lang_siteurl in extra_siteurls.items() %}
+        <bdi><a href="{{ lang_siteurl }}/">{{ LANGUAGE_NAMES[lang] }}</a></bdi>
+    {% endfor %}
+  </div>
+
   <div>
     <a href="{{ SITEURL }}/">
       {% if SITELOGO %}
