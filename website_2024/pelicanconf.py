@@ -61,6 +61,13 @@ JINJA_ENVIRONMENT = {
 
 INDEX_SAVE_AS = 'blog_index.html'
 
+def get_page_number(page):
+    field = page.metadata.get('page_number', None)
+    return int(field) if field else 0
+
+PAGE_ORDER_BY = get_page_number
+PAGE_SELECTION_FILTER = get_page_number
+
 I18N_SUBSITES = {
     'he': {
         'SITENAME': 'פייקון ישראל 2024',
