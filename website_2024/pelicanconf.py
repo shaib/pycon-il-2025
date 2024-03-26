@@ -83,3 +83,6 @@ LANGUAGE_NAMES = {
     'en': "English",
     'he': "עברית",
 }
+
+COPYRIGHT_YEAR = 2024
+COPYRIGHT_NAME = "Hamakor and individual contributors"
