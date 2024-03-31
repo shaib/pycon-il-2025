@@ -22,16 +22,21 @@ When you want to build the site itself, use `make html` from the
 can use `make clean` to remove everything if you want to rebuild
 from scratch; but it doesn't clean the theme files.
 
-The home page is currently defined in the template
-`website_2024/themes/PyCon-Israel-Flex/templates/index.html`. In the
-original template that came with the Flex theme, this page lists
-articles (blog posts), but we don't want that. The original template
-was kept for reference as `index.html.orig`. Also for reference, we
-kept the PyCon Israel 2023 home-page at
-`website_2024/content/pages/index.html.2023`. The intention is to
-change things so that the home page is defined like other pages,
-using a `index.md` file in `content/pages`, but we'll get there
-later.
+You can also use `make devserver` for the HTML, and `npm run watch`
+for the styling -- these create watchers which update the output as
+you change the source files.
+
+The home page is currently defined in the templates
+`website_2024/themes/PyCon-Israel-Flex/templates/homepage.html` and
+`.../homepage-he.html`. In the original template that came with the
+Flex theme, this page lists articles (blog posts), but we don't want
+that. The original template was kept for reference as
+`index.html.orig`. Also for reference, we kept the PyCon Israel 2023
+home-page at
+`website_2024/content/pages/index.html.2023`. Technically, the home
+page is defined like other pages, using files `homepage.md` and
+`homepage-he.md` in `content/pages`, but these only contain metadata
+(language, selection of template, etc).
 
 Other interesting files to look at:
 - The settings are defined in `website_2024/pelicanconf.py` (we are
