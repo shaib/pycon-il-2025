@@ -39,6 +39,8 @@ LINKS = (
     ("PyCon Israel 2022", "https://pycon.org.il/2022"),
     ("PyCon Israel 2021", "https://pycon.org.il/2021"),
     ("PyCon Israel 2019", "https://pycon.org.il/2019"),
+    ("PyCon Israel 2018", "https://pycon.org.il/2018"),
+    ("PyCon Israel 2016", "https://pycon.org.il/2016"),
 #    ("Python.org", "https://www.python.org/"),
 #    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 #    ("You can modify those links in your config file", "#"),
