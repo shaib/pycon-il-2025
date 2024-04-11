@@ -54,6 +54,7 @@ SOCIAL = (
     ("linkedin", "https://www.linkedin.com/company/pycon-israel/"),
     ("mastodon", "https://tooot.im/@pyconil/"),
 )
+SOCIAL_IN_FOOTER = True
 
 class PYCON:
     YEAR = 2024

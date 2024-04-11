@@ -84,7 +84,7 @@
     </nav>
     {% endif %}
 
-    {% if SOCIAL %}
+    {% if SOCIAL and SOCIAL_IN_SIDEBAR %}
     {% set solid = ['at', 'envelope', 'mailbox', 'rss'] %}
     {% set relme = ['at', 'envelope', 'mailbox', 'mastodon'] %}
     <ul class="social">

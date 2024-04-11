@@ -1,4 +1,21 @@
 <footer>
+  {% if SOCIAL and SOCIAL_IN_FOOTER %}
+    {% set solid = ['at', 'envelope', 'mailbox', 'rss'] %}
+    {% set relme = ['at', 'envelope', 'mailbox', 'mastodon'] %}
+    <ul class="social">
+      {% for name, link in SOCIAL %}
+      <li>
+        <a class="sc-{{ name }}"
+           {% if name in relme %}rel="me"{% endif %}
+           href="{{ link }}"
+           target="_blank">
+          <i class="{% if name in solid %}fa-solid{% else %}fa-brands{% endif %} fa-{{ name }}"></i>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
   {% if CC_LICENSE %}
     {% include "partial/cc_license.html" %}
   {% else %}
