@@ -11,7 +11,7 @@ We've compiled some important notes to help guide your submission. These notes c
 
 ## Important Dates
 * CFP Opens: Wednesday, 1 May
-* CFP Closes: Saturday, 1 June, Midnight Israel time
+* CFP Closes: Saturday, 8 June, Midnight Israel time
 * CFP Notifications: Sunday,7 July
 * Agenda published: Sunday, 14 July
 * Outline submission: Wednesday, 7 August
