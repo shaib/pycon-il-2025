@@ -58,9 +58,15 @@ SOCIAL_IN_FOOTER = True
 
 class PYCON:
     YEAR = 2024
-    DATES = "16.9.2024"
-    LOCATION = "Cinema City, Gelilot"
-
+    DATES = {
+        'en': "September 16, 2024",
+        'he': "16 בספטמבר 2024",
+    }
+    TECH_DATE = "2024-09-16"
+    LOCATION = {
+        'en': "Cinema City, Gelilot",
+        'he': "סינמה סיטי, גלילות",
+    }
     SPONSORSHIP_AVAILABLE = True
 
 DEFAULT_PAGINATION = False
