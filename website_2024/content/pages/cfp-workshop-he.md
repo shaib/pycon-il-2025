@@ -2,7 +2,7 @@ Title: סדנת CFP
 Slug: cfp-workshop
 Summary: בואו להרצות 📢 בפייקון ישראל! סדנת CFP ביום חמישי 23.5 בשעה 18:30
 Lang: he
-page_number: 25
+page_number: 45
 
 ## בואו להרצות  📢  בפייקון ישראל!
 
