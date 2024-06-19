@@ -26,21 +26,30 @@ You can also use `make devserver` for the HTML, and `npm run watch`
 for the styling -- these create watchers which update the output as
 you change the source files.
 
-The home page is currently defined in the templates
+Pages are in `website_2024/content/pages`, and are written in
+Markdown. At the top of each page there is a block of metadata. Of
+these, the `Title` field is very visible, but also critical are the
+`Slug` and `Lang` fields which define the page identity (the Hebrew
+and English versions of a page should have the same Slug; otherwise,
+different pages should have different Slugs). The `page_number` field
+determines the order of the page in the list of pages in the sidebar.
+
+The home page content is defined like other pages, using files
+`homepage.md` and `homepage-he.md` in `content/pages`; these contain
+mostly HTML, since the homepage is not an "article" like other
+pages. The metadata in these files has some unique fields, to choose
+the different templates and to save the page as `index.html`.
+
+The home page buttons and top is defined in the templates
 `website_2024/themes/PyCon-Israel-Flex/templates/homepage.html` and
 `.../homepage-he.html`. In the original template that came with the
 Flex theme, this page lists articles (blog posts), but we don't want
 that. The original template was kept for reference as
-`index.html.orig`. Also for reference, we kept the PyCon Israel 2023
-home-page at
-`website_2024/content/pages/index.html.2023`. Technically, the home
-page is defined like other pages, using files `homepage.md` and
-`homepage-he.md` in `content/pages`, but these only contain metadata
-(language, selection of template, etc).
+`index.html.orig`. 
 
 Other interesting files to look at:
-- The settings are defined in `website_2024/pelicanconf.py` (we are
-  not publishing yet, "production" should use `publishconf.py`)
+- The settings are defined in `website_2024/pelicanconf.py` (for
+  development) and `publishconf.py` (for "production").
 - The sidebar is defined in
   `website_2024/themes/PyCon-Israel-Flex/templates/partial/sidebar.html`
 - The footer (currently still default, to be changed) is in 
@@ -48,6 +57,7 @@ Other interesting files to look at:
 - All (non-partial) templates extend
   `website_2024/themes/PyCon-Israel-Flex/templates/base.html` -- that
   means that template defines structure for everything.
+
 
 References of software used:
 - Pelican: You can start at
