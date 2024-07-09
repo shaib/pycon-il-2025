@@ -2,13 +2,14 @@ Title: סדנת CFP
 Slug: cfp-workshop
 Summary: בואו להרצות 📢 בפייקון ישראל! סדנת CFP ביום חמישי 23.5 בשעה 18:30
 Lang: he
-page_number: 45
+date: 2024-05-16
+
 
 ## בואו להרצות  📢  בפייקון ישראל!
 
 ![decorative - hello pyconil 2024]({static}/images/hello-pyconil-2024.jpeg)
 
-[הקריאה להרצאות]({filename}cfp.md) של פייקון 2024 פתוחה!
+[הקריאה להרצאות]({filename}/pages/cfp.md) של פייקון 2024 פתוחה!
 
 חושבת או חושב להגיש הצעה? הצטרפו אלינו לסדנת CFP שתערך ברשת ביום
 חמישי, 23 במאי, בשעה 18:30. אנחנו, יחד עם דוברות ודוברים מנוסים,
