@@ -22,3 +22,9 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
+
+# Support for alternate, test deployments
+try:
+    from alternateconf import *
+except ImportError:
+    pass
