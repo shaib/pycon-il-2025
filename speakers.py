@@ -3,8 +3,6 @@ import argparse
 import csv
 import json
 import requests
-import numpy as np
-import pandas as pd
 import urllib.parse
 import urllib.request
 from pathlib import Path
