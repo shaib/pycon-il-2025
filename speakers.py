@@ -97,21 +97,34 @@ def fetch_handler(event, item_type, token, verbose=False):
 
 def filter_speakers(speakers, talks):
 
-    accepted_submissions = [t['code'] for t in talks if t['state'] == 'confirmed']
-    print(f"Accepted talks: {len(accepted_submissions)}")
-    print(f"Accepted talks: {accepted_submissions}")
+    accepted_talks = [t['code'] for t in talks if t['state'] == 'confirmed']
+    # accepted_speakers = set(
+    #     s['code'] for t in talks for s in t['speakers'] if t['state'] == 'confirmed'
+    # )
+
+    # accepted = []
+    # for speaker in speakers:
+    #     if speaker['code'] in accepted_speakers:
+    #         accepted.append(speaker)
 
     accepted = []
     for speaker in speakers:
         for talk in speaker['submissions']:
-            if talk in accepted_submissions:
+            if talk in accepted_talks:
                 accepted.append(speaker)
-                break
+                # break
+
+    # print('-----')
+    # print(f"Accepted talks: {len(accepted_talks)}")
+    # print(f"Accepted talks: {accepted_talks}")
+    # print('-----')
+    # print(f"Accepted speakers: {len(accepted)}")
+    # print(f"Accepted speakers: {accepted}")
 
     return accepted
 
 
-SPAKERS_MD = """Title: PyCon Israel 2024 Speakers
+SPAKERS_MD = """Title: Speakers
 Slug: speakers
 Template: speakers
 save_as: speakers.html
