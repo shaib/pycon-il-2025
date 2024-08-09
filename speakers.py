@@ -110,15 +110,15 @@ def filter_speakers(speakers, talks):
     accepted = []
     for speaker in speakers:
         for talk in speaker['submissions']:
-            if talk in accepted_talks:
+            if talk in accepted_talks and speaker['answers'].get('agree_to_publish', 'No') == 'True':
                 accepted.append(speaker)
                 # break
 
-    # print('-----')
-    # print(f"Accepted talks: {len(accepted_talks)}")
+    print('-----')
+    print(f"Accepted talks: {len(accepted_talks)}")
     # print(f"Accepted talks: {accepted_talks}")
-    # print('-----')
-    # print(f"Accepted speakers: {len(accepted)}")
+    print('-----')
+    print(f"Accepted speakers: {len(accepted)}")
     # print(f"Accepted speakers: {accepted}")
 
     return accepted
