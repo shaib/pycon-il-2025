@@ -266,7 +266,7 @@ def generate_speakers_page(speakers):
 
     speakers_list = []
     for speaker in speakers:
-        avatar = speaker['avatar'] if speaker['avatar'].strip() else './theme/img/PyConIL.png'
+        avatar = speaker['avatar'] if speaker['avatar'].strip() else '{static}/images/PyConIL.png'
         role = speaker['answers']['role'] if 'role' in speaker['answers'] else ''
         company = speaker['answers']['company'] if 'company' in speaker['answers'] else ''
 
