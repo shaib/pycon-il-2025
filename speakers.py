@@ -188,7 +188,7 @@ page_number: 17
         color: #007bff; /* Change to your desired hover color */
     }}
     .biography {{
-        max-height: 100px;
+        max-height: 80px;
         overflow: hidden;
         position: absolute;
         bottom: 0;
