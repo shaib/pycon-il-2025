@@ -145,7 +145,7 @@ page_number: 17
     }}
     .speaker-card {{
         width: 300px;
-        height: 400px;
+        height: 500px;
         border: 1px solid #ddd;
         border-radius: 10px;
         overflow: hidden;
@@ -157,8 +157,8 @@ page_number: 17
         flex-direction: column;
     }}
     .avatar {{
-        width: 100%;
-        height: 50%;
+        width: 300px;
+        height: 300px;
         object-fit: cover;
     }}
     .info {{
