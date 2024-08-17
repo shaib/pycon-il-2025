@@ -127,10 +127,8 @@ def filter_speakers(speakers, talks):
 SPAKERS_MD = """Title: Speakers
 Slug: speakers
 Template: speakers
-save_as: speakers.html
 Lang: en
-URL:
-page_number: 7
+page_number: 17
 
 <style>
     body {{
@@ -283,7 +281,7 @@ def generate_speakers_page(speakers):
         speakers_list.append(SPEAKER_CARD.format(
             avatar=avatar,
             name=speaker['name'].title(),
-            role=f"{role} @ {company}",
+            role=f"{role}<br/>{company}",
             bio=speaker['biography'],
             social_links=social_links_html,
         ))
