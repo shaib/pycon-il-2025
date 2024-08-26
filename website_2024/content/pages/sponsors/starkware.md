@@ -5,7 +5,6 @@ Lang: en
 sp_logo: StarkWare_Logo.jpg
 sp_link: https://starkware.co/
 hidden: true
-
 sp_level: 10-diamond
 
 StarkWare is an Israeli deep-tech company founded in 2018 by academics
