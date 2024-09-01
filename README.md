@@ -16,7 +16,15 @@ If you want to change anything in the CSS,
   and there run the command `npm install`
 - "Compilation" (mostly of the Less sources): Run the command
   `npm run build`
-  
+
+
+To create the speakers page you need to run the speakers.py script from
+inside the virtualenv like this (assuming the site is generated from
+website_2024 folder):
+  python ./speakers.py <event-name> -t <api-token> \
+  -o ./website_2024/content/pages/speakers.md
+
+
 When you want to build the site itself, use `make html` from the
 `website_2024` folder. It puts the built site in `output`. You
 can use `make clean` to remove everything if you want to rebuild
