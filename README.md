@@ -21,8 +21,8 @@ If you want to change anything in the CSS,
 To create the speakers page you need to run the speakers.py script from
 inside the virtualenv like this (assuming the site is generated from
 website_2024 folder):
-  python ./speakers.py <event-name> -t <api-token> \
-  -o ./website_2024/content/pages/speakers.md
+
+    python ./speakers.py <event-name> -t <api-token> -o ./website_2024/content/pages/speakers.md
 
 
 When you want to build the site itself, use `make html` from the
