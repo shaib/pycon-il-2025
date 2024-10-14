@@ -7,7 +7,7 @@ URL:
 page_number:
 
 <section id="plan">
-  <h2>Thanks for joing us at PyCon Israel!</h2>
+  <h2>Thanks for joining us at PyCon Israel!</h2>
   <p>
 	We thank all the attendees, speakers, sponsors, and of course -
 	PyCon Israel's wonderful team of organizers and volunteers.
