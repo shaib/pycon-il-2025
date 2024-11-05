@@ -19,7 +19,9 @@ page_number:
   <ul class="fancy-list-marker">
 <li>We have pictures from <a href="https://photos.app.goo.gl/VenoW9pJSqWaXGvv9">a day of conference talks</a> at Cinema City, Gelilot
 <li>and from <a href="https://photos.app.goo.gl/xBMKNEnpUe4tfK7K8">a day of workshops</a> at the Microsoft Reactor at Midtown, Tel Aviv
-<li>Videos of the talks will be published shortly
+<li>Videos of the talks are available on YouTube <a href="https://youtube.com/playlist?list=PLnOlTVPC-yFz7iAZS5gtPeGRY7dRE1R7x">in one playlist</a>;
+	there are also hall-specific playlists and playlists from older events on the
+	<a href="https://www.youtube.com/@PyConIsrael/playlists">PyCon Israel channel</a>
 <li>To subscribe to our mailing list for news and updates,
   <a href="https://lists.hamakor.org.il/postorius/lists/news.pycon.org.il">click here</a>
   </ul>

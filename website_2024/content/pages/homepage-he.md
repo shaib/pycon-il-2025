@@ -16,7 +16,10 @@ page_number:
   <ul class="fancy-list-marker">
 <li>יש לנו תמונות מ<a href="https://photos.app.goo.gl/VenoW9pJSqWaXGvv9">יום של הרצאות</a> בסינמה סיטי, גלילות
 <li>ומ<a href="https://photos.app.goo.gl/xBMKNEnpUe4tfK7K8">יום של סדנאות</a> בריאקטור של מיקרוסופט במידטאון, תל אביב
-<li>סרטוני הוידאו של ההרצאות יפורסמו בימים הקרובים
+<li יפורסמו בימים הקרובים
+<li>סרטוני הוידאו של ההרצאות נמצאים ב־YouTube <a href="https://youtube.com/playlist?list=PLnOlTVPC-yFz7iAZS5gtPeGRY7dRE1R7x">ברשימה אחת מאוחדת</a>;
+	יש גם רשימות נפרדות לכל אולם, ורשימות וסרטונים מאירועים קודמים,
+	ב<a href="https://www.youtube.com/@PyConIsrael/playlists">ערוץ של פייקון ישראל</a>
 <li>להרשמה לרשימת תפוצה לחדשות ועדכונים,
   <a href="https://lists.hamakor.org.il/postorius/lists/news.pycon.org.il">לחצו כאן</a>
   </ul>
