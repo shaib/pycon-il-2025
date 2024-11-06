@@ -85,7 +85,7 @@
 
             </li>
         {% endif %}
-	{% if pages and LINKS %}
+	{% if pages and (LINKS or PAST_CONFS_TITLE) %}
 	    <li><br/></li> {# put some space between pages and links #}
 	{% endif %}
         {% for name, link in LINKS %}
@@ -93,6 +93,17 @@
             <a target="{{ get_target(link) }}" href="{{ link }}" >{{ name }}</a>
           </li>
         {% endfor %}
+	{% if PAST_CONFS_TITLE %}
+          <li>
+	    {{ PAST_CONFS_TITLE }} <br/>
+	    <span>
+	    {% for year in PAST_CONF_YEARS %}
+              <a target="{{ get_target(PAST_CONF_BASE_URL) }}" href="{{ PAST_CONF_BASE_URL }}/{{ year }}">{{ year }}</a>
+	      {% if not loop.last %} | {% endif %}
+	    {% endfor %}
+	    </span>
+          </li>
+	{% endif %}
       </ul>
     </nav>
     {% endif %}

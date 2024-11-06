@@ -11,6 +11,9 @@ SITESUBTITLE = (
 
 BLOG_TITLE = "Updates"
 BLOG_SLUG = "updates"
+PAST_CONFS_TITLE = "Past PyCon Israel Conferences"
+PAST_CONF_YEARS = [2023, 2022, 2021, 2019, 2018]
+PAST_CONF_BASE_URL = "https://pycon.org.il/"
 
 PATH = "content"
 ARTICLE_PATHS = ['blog']
@@ -40,12 +43,12 @@ MARKDOWN = {
 }
 # Blogroll
 LINKS = (
-    ("PyCon Israel 2023", "https://pycon.org.il/2023"),
-    ("PyCon Israel 2022", "https://pycon.org.il/2022"),
-    ("PyCon Israel 2021", "https://pycon.org.il/2021"),
-    ("PyCon Israel 2019", "https://pycon.org.il/2019"),
-    ("PyCon Israel 2018", "https://pycon.org.il/2018"),
-    ("PyCon Israel 2016", "https://pycon.org.il/2016"),
+    # ("PyCon Israel 2023", "https://pycon.org.il/2023"),
+    # ("PyCon Israel 2022", "https://pycon.org.il/2022"),
+    # ("PyCon Israel 2021", "https://pycon.org.il/2021"),
+    # ("PyCon Israel 2019", "https://pycon.org.il/2019"),
+    # ("PyCon Israel 2018", "https://pycon.org.il/2018"),
+    # ("PyCon Israel 2016", "https://pycon.org.il/2016"),
 #    ("Python.org", "https://www.python.org/"),
 #    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
 #    ("You can modify those links in your config file", "#"),
@@ -129,6 +132,7 @@ I18N_SUBSITES = {
             'לטכנולוגיות הקשורות אליה, ולשימוש בהן'
         ),
         'BLOG_TITLE': 'עדכונים',
+        'PAST_CONFS_TITLE': "כנסי פייקון ישראל קודמים"
     }
 }
 I18N_UNTRANSLATED_ARTICLES = 'keep'
