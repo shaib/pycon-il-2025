@@ -3,6 +3,8 @@ Slug: tickets
 Summary: PyCon Israel 2024 tickets
 Lang: en
 date: 2024-08-26 23:30
+hidden: True
+
 page_number: 20
 
 A few important points about the PyCon Israel tickets:

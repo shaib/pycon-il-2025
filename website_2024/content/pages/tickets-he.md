@@ -3,6 +3,8 @@ Slug: tickets
 Summary:  כרטיסים לכנס פייקון ישראל 2024
 Lang: he
 date: 2024-08-26 23:30
+hidden: True
+
 page_number: 20
 
 כמה נקודות לגבי הכרטיסים של פייקון ישראל 2024:
