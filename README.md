@@ -6,8 +6,11 @@ Flex. This is a static website (this is what Pelican does), but it
 relies on a Pretalx system that manages and presents the schedule,
 talks and speakers.
 
-Technicalities:
----------------
+Technicalities
+--------------
+
+Tools and building
+..................
 
 The Python side is managed by [Poetry](https://python-poetry.org/).
 Use `poetry install` to get the dependencies.
@@ -42,6 +45,9 @@ You can also use `make devserver` for the HTML, and `npm run watch`
 for the styling -- these create watchers which update the output as
 you change the source files.
 
+Content
+.......
+
 Pages are in `website_2024/content/pages`, and are written in
 Markdown. At the top of each page there is a block of metadata. Of
 these, the `Title` field is very visible, but also critical are the
@@ -68,14 +74,15 @@ Other interesting files to look at:
   development) and `publishconf.py` (for "production").
 - The sidebar is defined in
   `website_2024/themes/PyCon-Israel-Flex/templates/partial/sidebar.html`
-- The footer (currently still default, to be changed) is in 
+- The footer is in 
   `website_2024/themes/PyCon-Israel-Flex/templates/partial/footer.html`
 - All (non-partial) templates extend
   `website_2024/themes/PyCon-Israel-Flex/templates/base.html` -- that
   means that template defines structure for everything.
 
+References of software used
+...........................
 
-References of software used:
 - Pelican: You can start at
   https://docs.getpelican.com/en/latest/content.html
 - Flex, the base for the theme here:
