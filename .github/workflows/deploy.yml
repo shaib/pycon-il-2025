@@ -87,5 +87,5 @@ jobs:
         run: |
           cd ${{ github.workspace }}
           git add ${{ env.OUTPUT_DIR }}
-          git commit -m "Update /docs with latest build"
+          git commit -m "Update /docs with latest build" || git commit --allow-empty -m "/docs rebuild introduced no changes"
           git push origin release
