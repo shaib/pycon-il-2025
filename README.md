@@ -1,16 +1,11 @@
-Website for PyCon Israel 2024
-=============================
+# Website for PyCon Israel 2024
 
 Website built with Pelican, using a PyCon-Israel-Flex theme based on
 Flex. This is a static website (this is what Pelican does), but it
 relies on a Pretalx system that manages and presents the schedule,
 talks and speakers.
 
-Technicalities
---------------
-
-Tools and building
-..................
+## Tools and building
 
 The Python side is managed by [Poetry](https://python-poetry.org/).
 Use `poetry install` to get the dependencies.
@@ -45,8 +40,7 @@ You can also use `make devserver` for the HTML, and `npm run watch`
 for the styling -- these create watchers which update the output as
 you change the source files.
 
-Content
-.......
+## Content
 
 Pages are in `website_2024/content/pages`, and are written in
 Markdown. At the top of each page there is a block of metadata. Of
@@ -80,8 +74,7 @@ Other interesting files to look at:
   `website_2024/themes/PyCon-Israel-Flex/templates/base.html` -- that
   means that template defines structure for everything.
 
-References of software used
-...........................
+## References of software used
 
 - Pelican: You can start at
   https://docs.getpelican.com/en/latest/content.html
