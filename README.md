@@ -1,8 +1,10 @@
 Website for PyCon Israel 2024
 =============================
 
-Website built with Pelican, using a PyCon-Israel-Flex theme
-based on Flex.
+Website built with Pelican, using a PyCon-Israel-Flex theme based on
+Flex. This is a static website (this is what Pelican does), but it
+relies on a Pretalx system that manages and presents the schedule,
+talks and speakers.
 
 Technicalities:
 ---------------
@@ -17,15 +19,21 @@ If you want to change anything in the CSS,
 - "Compilation" (mostly of the Less sources): Run the command
   `npm run build`
 
+When you want to build the site itself, there's two things you need to do:
 
-To create the speakers page you need to run the speakers.py script from
+First, to create the speakers page, you need to run the 
+`speakers.py` script (found in the repo's root folder) from
 inside the virtualenv like this (assuming the site is generated from
 website_2024 folder):
 
-    python ./speakers.py <event-name> -t <api-token> -o ./website_2024/content/pages/speakers.md
+    python ./speakers.py <event-slug> -t <api-token> -o ./website_2024/content/pages/speakers.md
 
+In this command, `<event-slug>` is the slug for the event in Pretalx,
+and `<api-token>` is an authentication token you can get from your 
+Pretalx profile page. For PyCon Israel 2024, `event-slug` is `pycon-2024`,
+and your profile page is https://cfp.pycon.org.il/pycon-2024/me/ .
 
-When you want to build the site itself, use `make html` from the
+Then, use `make html` from the
 `website_2024` folder. It puts the built site in `output`. You
 can use `make clean` to remove everything if you want to rebuild
 from scratch; but it doesn't clean the theme files.
@@ -82,3 +90,8 @@ References of software used:
     (it is based on an old version of Flex, though)
 - The Pelican plugin for image processing (not yet in use):
   https://github.com/pelican-plugins/image-process
+- The separate Pretalx system we're relying on is
+  https://github.com/Hamakor/pycon-il-dockerized-pretalx; of course,
+  it is based on https://pretalx.com/p/about/
+  (and our intention is to get rid of it -- add all our modifications
+  upstream, and have our system hosted)
