@@ -38,7 +38,7 @@ jobs:
           cd website_2024/themes/PyCon-Israel-Flex/
           npm install
 
-      - name: Build project
+      - name: Build theme
         run: |
           cd website_2024/themes/PyCon-Israel-Flex/
           npm run build
@@ -70,7 +70,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
 
-      - name: Generated spakers page
+      - name: Generated speakers page
         run: |
           poetry run python speakers.py ${{ vars.PRETALX_EVENT_NAME }} -t ${{ vars.PRETALX_API_TOKEN }} -o website_2024/content/pages/speakers.md --verbose
 
