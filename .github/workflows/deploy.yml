@@ -79,6 +79,8 @@ jobs:
           git rm -rf ${{ env.OUTPUT_DIR }}
           cd website_2024/
           poetry run pelican ${{ env.INPUT_DIR }} -o ${{ env.OUTPUT_DIR }} -s ${{ env.PELICAN_CONF }}
+        env:
+          PLCN_SITEURL: ${{ vars.PLCN_SITEURL }}
 
       # - name: Copy output to /docs
       #   run: cp -r website_2024/output/* docs/

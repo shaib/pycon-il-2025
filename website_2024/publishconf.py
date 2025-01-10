@@ -8,7 +8,9 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = "https://pycon.org.il/2024"
+# Note in SITEURL, we use `or` rather than a default, to handle
+# correctly the case that the env var is set to empty
+SITEURL = os.environ.get("PLCN_SITEURL") or "https://pycon.org.il/2024"
 RELATIVE_URLS = False
 
 FEED_DOMAIN = SITEURL

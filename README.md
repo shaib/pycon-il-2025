@@ -40,6 +40,58 @@ You can also use `make devserver` for the HTML, and `npm run watch`
 for the styling -- these create watchers which update the output as
 you change the source files.
 
+### Deployment
+
+This repo is set up to deploy by Github Actions, to a GitHub Pages
+page. On the main repo, this gets deployed to
+https://hamakor.github.io/pycon-il-2024/ which is proxied from
+https://pycon.org.il/2024 . For this proxy to work well, the `SITEURL`
+setting points to that latter URL, rather than directly to the GitHub
+Pages (as usual with Pelican, in publishing we set the URLs to
+absolute and not relative).
+
+The deploy operation is defined to trigger only on pushes to `main`.
+
+The configuration settings are defined in
+`website_2024/pelicanconf.py` (for development) and `publishconf.py`
+(for "production").
+
+Note that all explanations about Github here are valid at the time
+written, but Github may change their UI, or the way Pages and Actions
+work.
+
+#### Alternate Deployment
+
+The trivial case where you'd want an alternate deployment is when
+preparing changes in the website contents. Then, the only thing
+you really need to change is the `SITEURL`. The Github Action is
+set to read this from a Github Environment Variable `PLCN_SITEURL`,
+so you can just set that to your Github Pages site URL.
+
+To set environment variables in Github, go to your repository
+settings, select "Secrets and variables" (under "Security"),
+and in the submenu choose "Actions".
+
+In case you want your deployment to include the Speakers page, you
+also need to set two further variables: `PRETALX_API_TOKEN` and
+`PRETALX_EVENT_NAME`. They will fill the roles of `<api-token>` and
+`<event-slug>`, as described above.
+
+Note that these are all defined as variables, not secrets. This is
+generally OK -- variables are only visible to people who have access
+to your repo settings, and the log of actions (where the token is
+printed) is also not publicly accessible.
+
+In case you want your deployment to include other configuration
+changes which should not be part of the main deployment, you can put
+them in a file `alternateconf.py` next to `pelicanconf.py` and
+`publishconf.py`; definitions from `alternateconf.py` will override
+those from `publishconf.py` (which, in turn, inherit and override
+those in `pelicanconf.py`).  The `alternateconf.py` file does not
+exist in the main branch, in order to make it easy to keep a separate
+branch in which it is added (and which you can then push to `main` on
+your own repo).
+
 ## Content
 
 Pages are in `website_2024/content/pages`, and are written in
@@ -64,8 +116,6 @@ that. The original template was kept for reference as
 `index.html.orig`. 
 
 Other interesting files to look at:
-- The settings are defined in `website_2024/pelicanconf.py` (for
-  development) and `publishconf.py` (for "production").
 - The sidebar is defined in
   `website_2024/themes/PyCon-Israel-Flex/templates/partial/sidebar.html`
 - The footer is in 
