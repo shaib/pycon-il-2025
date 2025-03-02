@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "website-2024"
+name = "website-2025"
 version = "0.1.0"
-description = "PyCon Israel 2024 website"
+description = "PyCon Israel 2025 website"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 

@@ -7,27 +7,17 @@ URL:
 page_number:
 
 <section id="plan">
-  <h2>Thanks for joining us at PyCon Israel!</h2>
-  <p>
-	We thank all the attendees, speakers, sponsors, and of course -
-	PyCon Israel's wonderful team of organizers and volunteers.
-	<br>
-	It was an enriching, interesting and inspiring conference.
-	See you next year!
-  </p>
-
+  <h3>Welcome to PyCon Israel!</h3>
   <ul class="fancy-list-marker">
-<li>We have pictures from <a href="https://photos.app.goo.gl/VenoW9pJSqWaXGvv9">a day of conference talks</a> at Cinema City, Gelilot
-<li>and from <a href="https://photos.app.goo.gl/xBMKNEnpUe4tfK7K8">a day of workshops</a> at the Microsoft Reactor at Midtown, Tel Aviv
-<li>Videos of the talks are available on YouTube <a href="https://youtube.com/playlist?list=PLnOlTVPC-yFz7iAZS5gtPeGRY7dRE1R7x">in one playlist</a>;
-	there are also hall-specific playlists and playlists from older events on the
-	<a href="https://www.youtube.com/@PyConIsrael/playlists">PyCon Israel channel</a>
+<li><b>CFP is open!</b> The deadline for submissions is <time datetime="2024-06-08">8.6.2024</time>
+<li>To join our sponsors, please write to
+  <a href="mailto:sponsors@pycon.org.il">sponsors@pycon.org.il</a>
 <li>To subscribe to our mailing list for news and updates,
   <a href="https://lists.hamakor.org.il/postorius/lists/news.pycon.org.il">click here</a>
   </ul>
 </section>
 <section id="pictures">
-<!--
+
 <span class="r1c1">
 		<img src="./theme/img/2023/oren.jpg"
 	 alt="A picture taken at PyCon Israel 2023"
@@ -54,7 +44,6 @@ page_number:
 	 alt="A picture taken at PyCon Israel 2023"
 	 title="A picture taken at PyCon Israel 2023">
 </span>
--->
 </section>
 <section id="about">
   <h2>About PyCon Israel</h2>
@@ -77,5 +66,24 @@ PyCon is a diverse conference dedicated to providing an
 enjoyable experience to everyone - and features international
 keynote speakers and talks from local Python experts, as well
 as community-building activities.
+  </p>
+  <p>
+PyCon Israel 2024 will include a day of talks at Cinema
+City, Gelilot, and a day of workshops (location to be
+announced).  Two days of learning and socializing, fun and
+collaboration, all around Python &mdash; continuing the
+tradition started in 2016.
+  </p>
+  <p>
+In 2023 we
+had <a href="https://photos.app.goo.gl/UVupGP8N7q3UVPct5">a
+day of talks</a>
+and <a href="https://photos.app.goo.gl/B12ZznWWJN2cS2Sk6">a
+day of workshops</a>;
+<a href="https://www.youtube.com/playlist?list=PLnOlTVPC-yFwhpiyjsC0V_98pqRbtwNgh">
+videos of the talks </a>are available.
+  <br/>
+For more details, visit the
+<a href="https://pycon.org.il/2023/index.html">2023 conference website</a>.
   </p>
 </section>

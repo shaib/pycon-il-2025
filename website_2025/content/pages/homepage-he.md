@@ -7,25 +7,16 @@ URL:
 page_number:
 
 <section id="plan">
-  <h2>תודה על שהייתם/ן איתנו בפייקון!</h2>
-  <p>
-	  תודה לכל המשתתפות/ים, הדוברים/ות ונותני החסות וכמובן - לצוות
-	  המארגנים/ות המופלא של פייקון ישראל.<br/> היה כנס מעשיר, מעניין ומלא
-	  השראה. נתראה בשנה הבאה :)
-  </p>
+  <h3>ברוכים הבאים וברוכות הבאות לפייקון!</h3>
   <ul class="fancy-list-marker">
-<li>יש לנו תמונות מ<a href="https://photos.app.goo.gl/VenoW9pJSqWaXGvv9">יום של הרצאות</a> בסינמה סיטי, גלילות
-<li>ומ<a href="https://photos.app.goo.gl/xBMKNEnpUe4tfK7K8">יום של סדנאות</a> בריאקטור של מיקרוסופט במידטאון, תל אביב
-<li יפורסמו בימים הקרובים
-<li>סרטוני הוידאו של ההרצאות נמצאים ב־YouTube <a href="https://youtube.com/playlist?list=PLnOlTVPC-yFz7iAZS5gtPeGRY7dRE1R7x">ברשימה אחת מאוחדת</a>;
-	יש גם רשימות נפרדות לכל אולם, ורשימות וסרטונים מאירועים קודמים,
-	ב<a href="https://www.youtube.com/@PyConIsrael/playlists">ערוץ של פייקון ישראל</a>
+<li><b>הקול הקורא להגשת הרצאות נפתח!</b> ניתן להגיש עד <time datetime="2024-06-08">8.6.2024</time>
+<li>להצטרפות אל נותני החסות שלנו,
+  כתבו ל־<a href="mailto:sponsors@pycon.org.il">sponsors@pycon.org.il</a>
 <li>להרשמה לרשימת תפוצה לחדשות ועדכונים,
   <a href="https://lists.hamakor.org.il/postorius/lists/news.pycon.org.il">לחצו כאן</a>
   </ul>
 </section>
 <section id="pictures">
-<!--
 <span class="r1c1">
 		<img src="../theme/img/2023/oren.jpg"
 	 alt="A picture taken at PyCon Israel 2023"
@@ -51,7 +42,6 @@ page_number:
 	 alt="A picture taken at PyCon Israel 2023"
 	 title="A picture taken at PyCon Israel 2023">
 </span>
--->
 </section>
 <section id="about">
   <h2>על כנס פייקון ישראל</h2>
@@ -77,5 +67,25 @@ page_number:
 הקהילה המקומית, חבריה וחברותיה.
 
 
+  </p>
+  <p>
+
+פייקון ישראל 2024 יכלול יום של הרצאות שייערך בסינמה סיטי
+גלילות, ויום סדנאות שמקומו יפורסם בהמשך.  שני ימים של למידה
+ומפגשים, הנאה ושיתופי פעולה, סביב שפת פייתון &mdash; בהתאם
+למסורת הנמשכת מאז שנת 2016.
+
+  </p>
+  <p>
+
+בשנת 2023
+התקיימו <a href="https://photos.app.goo.gl/UVupGP8N7q3UVPct5">יום
+הרצאות</a>
+ו<a href="https://photos.app.goo.gl/B12ZznWWJN2cS2Sk6">יום
+סדנאות</a>; את ההרצאות ניתן לראות
+ב<a href="https://www.youtube.com/playlist?list=PLnOlTVPC-yFwhpiyjsC0V_98pqRbtwNgh">וידאו</a>.
+
+  <br/>
+  לפרטים נוספים, בקרו ב<a href="https://pycon.org.il/2023/heb/home.html">אתר כנס 2023</a>.
   </p>
 </section>
