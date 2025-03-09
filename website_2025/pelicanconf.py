@@ -1,7 +1,7 @@
 from  markdown.extensions.toc import slugify_unicode
 
 AUTHOR = 'PyCon Israel Team'
-SITENAME = 'PyCon Israel 2024'
+SITENAME = 'PyCon Israel 2025'
 SITEURL = ""
 
 SITESUBTITLE = (
@@ -12,7 +12,7 @@ SITESUBTITLE = (
 BLOG_TITLE = "Updates"
 BLOG_SLUG = "updates"
 PAST_CONFS_TITLE = "Past PyCon Israel Conferences"
-PAST_CONF_YEARS = [2023, 2022, 2021, 2019, 2018]
+PAST_CONF_YEARS = [2024, 2023, 2022, 2021, 2019, 2018]
 PAST_CONF_BASE_URL = "https://pycon.org.il/"
 
 PATH = "content"
@@ -65,12 +65,12 @@ SOCIAL = (
 SOCIAL_IN_FOOTER = True
 
 class PYCON:
-    YEAR = 2024
+    YEAR = 2025
     DATES = {
-        'en': "September 16, 2024",
-        'he': "16 בספטמבר 2024",
+        'en': "September 9, 2025",
+        'he': "09 בספטמבר 2025",
     }
-    TECH_DATE = "2024-09-16"
+    TECH_DATE = "2025-09-09"
     LOCATION = {
         'en': "Cinema City, Gelilot",
         'he': "סינמה סיטי, גלילות",
@@ -126,7 +126,7 @@ PAGE_SELECTION_FILTER = get_page_number
 
 I18N_SUBSITES = {
     'he': {
-        'SITENAME': 'פייקון ישראל 2024',
+        'SITENAME': 'פייקון ישראל 2025',
         'SITESUBTITLE': (
             'פייקון ישראל הוא כנס המוקדש לשפת התכנות פייתון, '
             'לטכנולוגיות הקשורות אליה, ולשימוש בהן'
@@ -143,5 +143,5 @@ LANGUAGE_NAMES = {
     'he': "עברית",
 }
 
-COPYRIGHT_YEAR = 2024
+COPYRIGHT_YEAR = 2025
 COPYRIGHT_NAME = "Hamakor and individual contributors"
