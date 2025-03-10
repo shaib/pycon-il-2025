@@ -1,3 +1,28 @@
+# PyCon Israel version of Peliconf
+
+We took the old Peliconf, and we're adapting it for PyCon Israel.
+Peliconf was built with Compass, may its soul rest in peace; we are in
+the process of porting to more modern Sass.
+
+If you make any styling changes, see the Customization notes below.
+
+## Attribution
+
+Peliconf was taken from https://github.com/wikey/peliconf
+
+In order to make it compile, we needed to make some modifications in
+the package.json and gulpfile.js files, and to vendor (again, with
+minor modifications) the Compass stylesheets library.
+
+Compass stylesheet library (the file `_compass.scss` and the folder
+`compass` in the folder `sass` here) were taken from
+https://github.com/Compass/compass/tree/stable/core/stylesheets with
+modification made to the file `compass/_support.scss`.
+
+## Original Peliconf README below
+
+----
+
 # Peliconf
 
 
