@@ -4,7 +4,7 @@ AUTHOR = 'PyCon Israel Team'
 SITENAME = 'PyCon Israel 2025'
 SITEURL = ""
 
-SITESUBTITLE = (
+EVENT_CLAIM = (
     "PyCon Israel is a conference dedicated to the Python "
     "programming language, related technologies, and their use."
 )
@@ -65,6 +65,7 @@ SOCIAL = (
 SOCIAL_IN_FOOTER = True
 
 class PYCON:
+    """ Used in PyCon-Israel-Flex template, not yet in peliconf """
     YEAR = 2025
     DATES = {
         'en': "September 9, 2025",
@@ -77,6 +78,11 @@ class PYCON:
     }
     SPONSORSHIP_AVAILABLE = True
 
+# Peliconf parameters
+EVENT_DATE = '9/9/2025'
+EVENT_LOCATION = "Cinema City, Gelilot"
+
+# PyConIL-flex
 SPONSOR_LEVELS = {
     '10-diamond': {
         'class': "sp-diamond",
@@ -105,8 +111,166 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME = "themes/PyCon-Israel-Flex"
-STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
+
+THEME = "themes/PyCon-Israel-peliconf"
+# STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
+BRANDING_LINK = (SITEURL, 'PyCon Israel 2025', 'PyConIL.png',)
+EVENT_CTA_BUTTONS = (
+    ('Conference Tickets', 'https://www.eventbrite.com/', True),
+    ('Dinner Tickets', 'https://www.eventbrite.com/', False),
+)
+# The option social events
+SOCIAL_EVENTS = []
+# Sponsors
+EVENT_PARTNERS = {
+    'diamond': [
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+    ],
+    'platinum': [
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+    ],
+    'gold': [
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+    ],
+    'silver': [],
+    'media': [
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+        ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
+    ],
+}
+SOCIAL_LINKS = [
+    # Peliconf version of social links
+    # 1. The social name
+    # 2. The social link
+    # 3. The icon (get the name from materialdesignicons.com)
+    # 4. A boolean, True if you want to hide the social name (and show only the icon)
+    # Temporarily, just keep what we have:
+    (name, link, name, True) for (name, link) in SOCIAL
+]
+
+# Peliconf: make menu
+DISPLAY_PAGES_ON_MENU = True
+
+# Additional links that will be placed in the footer navigation
+# Remember that you can put pages in the footer navigation using the :nav: footer meta
+FOOTER_LINKS = (
+    # Peliconf -- just to see
+    # Probably will break over bilingual
+    ('Code of Conduct', '/pages/CoC.html' ),
+)
+
+# Peliconf: main speakers. Tuple description:
+# 1. Speaker Name
+# 2. Speaker picture, if None a placeholder will be shown
+SPEAKERS = (
+    ('Carlo Ascani', 'speaker-male.png'),
+    ('Mario Rossi', None),
+    ('Carla Bianchi', 'speaker-female.png'),
+    ('Chiara Rossi', 'speaker-female.png'),
+)
+
+# Peliconf: conference schedule
+SCHEDULE = (
+    ('09:00', [
+        {
+            'title': 'Registration'
+        },
+    ]),
+    ('09:45', [
+        {
+            'track': 'auditorium',
+            'title': 'Keynote',
+            'slug': 'keynote',
+            'speakers': [
+                'Carlo Ascani',
+            ]
+        },
+    ]),
+    ('10:30', [
+        {
+            'title': 'Coffee Break',
+            'extra_class': 'schedule-item--coffe',
+        },
+    ]),
+    ('10:45', [
+        {
+            'track': 'room A',
+            'title': 'The Awesome Talk',
+            # The talk slug is used to get the detail page
+            'slug': 'the-awesome-talk',
+            'level': 'hard',
+            'language': 'english',
+            'duration': '45 min',
+            'speakers': [
+                'Carlo Ascani',
+            ]
+        },
+        {
+            'track': 'room B',
+            'title': 'The Big Talk',
+            'slug': 'the-big-talk',
+            'level': 'novice',
+            'language': 'italian',
+            'duration': '45 min',
+            'speakers': [
+                'Franco Rossi',
+                'Maria Rossi'
+            ]
+        },
+    ]),
+    ('13:00', [
+        {
+            'title': 'Pranzo',
+            'extra_class': 'schedule-item--lunch',
+        },
+    ]),
+    ('13:45', [
+        {
+            'track': 'room A',
+            'title': 'The Incredible Talk',
+            'slug': 'the-incredible-talk',
+            'level': 'hard',
+            'language': 'english',
+            'duration': '45 min',
+            'speakers': [
+                'Carlo Ascani',
+            ]
+        },
+        {
+            'track': 'room B',
+            'title': 'The Nice Talk',
+            'slug': 'the-nice-talk',
+            'level': 'novice',
+            'language': 'italian',
+            'duration': '45 min',
+            'speakers': [
+                'Franco Rossi',
+                'Maria Rossi'
+            ]
+        },
+    ]),
+    ('15:30', [
+        {
+            'title': 'Coffee Break',
+            'extra_class': 'schedule-item--coffe',
+        },
+    ]),
+    ('16:30', [
+        {
+            'track': 'auditorium',
+            'title': 'Lightning Talks',
+        },
+    ]),
+    ('18:00', [
+        {
+            'title': 'The Beer at the Awesome Pub',
+            'extra_class': 'schedule-item--beer',
+        },
+    ]),
+)
+
 
 IMAGE_PROCESS = {}
 
@@ -115,7 +279,7 @@ JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
 }
 
-INDEX_SAVE_AS = 'blog_index.html'
+# INDEX_SAVE_AS = 'blog_index.html'
 
 def get_page_number(page):
     field = page.metadata.get('page_number', None)
@@ -127,7 +291,7 @@ PAGE_SELECTION_FILTER = get_page_number
 I18N_SUBSITES = {
     'he': {
         'SITENAME': 'פייקון ישראל 2025',
-        'SITESUBTITLE': (
+        'EVENT_CLAIM': (
             'פייקון ישראל הוא כנס המוקדש לשפת התכנות פייתון, '
             'לטכנולוגיות הקשורות אליה, ולשימוש בהן'
         ),
@@ -145,3 +309,4 @@ LANGUAGE_NAMES = {
 
 COPYRIGHT_YEAR = 2025
 COPYRIGHT_NAME = "Hamakor and individual contributors"
+COPYRIGHT = f"© Copyright {COPYRIGHT_YEAR} {COPYRIGHT_NAME}"

@@ -33,6 +33,10 @@
     {% endif %}
 {% endblock head %}
     <link rel="stylesheet" type="text/css" href="{{ main_siteurl }}/theme/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/brands.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/solid.css">
+
     {% block extra_css %}{% endblock extra_css %}
 </head>
 
@@ -56,15 +60,32 @@
                 </a>
             {% endif %}
             <ul id="js-navigation--main__list" class="navigation--main__list">
-                {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in PAGES %}
-                    {% if not p.nav == 'footer' %}
-                        <li{% if p == page %} class="current"{% endif %}>
-                            <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-                        </li>
-                    {% endif %}
-                    {% endfor %}
-                {% endif %}
+              {% if DISPLAY_PAGES_ON_MENU %}
+	      
+                {# Open links in new window depending on the LINKS_IN_NEW_TAB setting #}
+                {% macro get_target(link) -%}
+                  {%- if LINKS_IN_NEW_TAB in ('all', true) -%}
+                  _blank
+                  {%- elif LINKS_IN_NEW_TAB == "external" and not link.startswith("/") and not link.startswith(SITEURL) -%}
+                  _blank
+                  {%- else -%}
+                  _self
+                  {%- endif -%}
+                {%- endmacro %}
+
+                {% if PAGES_SORT_ATTRIBUTE -%}
+                  {% set pages = pages|sort(attribute=PAGES_SORT_ATTRIBUTE) %}
+                {%- endif %}
+
+                {% for p in pages if (not PAGE_SELECTION_FILTER) or PAGE_SELECTION_FILTER(p) %}
+                  <li{% if p == page %} class="current"{% endif %}>
+                    <a target="{{ get_target(SITEURL) }}"
+		       href="{{ SITEURL }}/{{ p.url }}{% if not DISABLE_URL_HASH %}#{{ p.slug }}{% endif %}">
+		    {{ p.title }}
+		    </a>
+		  </li>
+	        {% endfor %}
+              {% endif %}
                 {% if lang_siteurls %}
                 <li class="lang-menu">
                     {% for lang, url in lang_siteurls.items() %}
@@ -114,7 +135,7 @@
             {% for label, url, icon, hide_label in SOCIAL_LINKS %}
             <a href="{{ url }}">
                 {% if icon %}
-                    <i class="mdi mdi-{{ icon }}"></i>
+                    <i class="fa-brands fa-{{ icon }}"></i>
                     {% if not hide_label %}
                         {{ label }}
                     {% endif %}
