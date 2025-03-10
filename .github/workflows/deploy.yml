@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  INPUT_DIR: ${{ github.workspace }}/website_2024/content
+  INPUT_DIR: ${{ github.workspace }}/website_2025/content
   OUTPUT_DIR: ${{ github.workspace }}/docs
-  PELICAN_CONF: ${{ github.workspace }}/website_2024/publishconf.py
+  PELICAN_CONF: ${{ github.workspace }}/website_2025/publishconf.py
 
 jobs:
   merge-build:
@@ -35,12 +35,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd website_2024/themes/PyCon-Israel-Flex/
+          cd website_2025/themes/PyCon-Israel-peliconf/
           npm install
 
       - name: Build theme
         run: |
-          cd website_2024/themes/PyCon-Israel-Flex/
+          cd website_2025/themes/PyCon-Israel-peliconf/
           npm run build
 
       - name: Install dependencies for make html
@@ -50,7 +50,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.13'
 
       - name: Install Poetry
         uses: snok/install-poetry@v1
@@ -72,18 +72,19 @@ jobs:
 
       - name: Generated speakers page
         run: |
-          poetry run python speakers.py ${{ vars.PRETALX_EVENT_NAME }} -t ${{ vars.PRETALX_API_TOKEN }} -o website_2024/content/pages/speakers.md --verbose
+          echo restore this when relevant
+          echo poetry run python speakers.py ${{ vars.PRETALX_EVENT_NAME }} -t ${{ vars.PRETALX_API_TOKEN }} -o website_2025/content/pages/speakers.md --verbose
 
       - name: Build HTML
         run: |
-          git rm -rf ${{ env.OUTPUT_DIR }}
-          cd website_2024/
+          git rm -rf ${{ env.OUTPUT_DIR }} || echo "found nothing to remove"
+          cd website_2025/
           poetry run pelican ${{ env.INPUT_DIR }} -o ${{ env.OUTPUT_DIR }} -s ${{ env.PELICAN_CONF }}
         env:
           PLCN_SITEURL: ${{ vars.PLCN_SITEURL }}
 
       # - name: Copy output to /docs
-      #   run: cp -r website_2024/output/* docs/
+      #   run: cp -r website_2025/output/* docs/
 
       - name: Commit and push changes
         run: |
