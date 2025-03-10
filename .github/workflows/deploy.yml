@@ -79,6 +79,8 @@ jobs:
         run: |
           git rm -rf ${{ env.OUTPUT_DIR }} || echo "found nothing to remove"
           cd website_2025/
+          echo PLCN_SITEURL is "$PLCN_SITEURL" in 'env:'
+          env | grep SITEURL
           poetry run pelican ${{ env.INPUT_DIR }} -o ${{ env.OUTPUT_DIR }} -s ${{ env.PELICAN_CONF }}
         env:
           PLCN_SITEURL: ${{ vars.PLCN_SITEURL }}
