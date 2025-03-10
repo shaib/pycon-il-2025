@@ -3,6 +3,7 @@ Slug: pictures
 Summary: PyCon Israel 2024 Videos and Photos
 Lang: en
 date: 2024-11-06 23:30
+
 page_number: 20
 
 Videos of the talks are available on YouTube [in one

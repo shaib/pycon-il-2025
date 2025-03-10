@@ -3,6 +3,7 @@ Slug: pictures
 Summary: סרטונים ותמונות מפייקון ישראל 2024
 Lang: he
 date: 2024-11-06 23:30
+
 page_number: 20
 
 סרטונים של כל ההרצאות נמצאים ב־YouTube [ברשימת נגינה

@@ -1,10 +1,11 @@
 Title: PyCon Israel 2024
 Slug: homepage
-Template: homepage
-save_as: index.html
 Lang: en
 URL:
 page_number:
+
+Template: homepage
+save_as: index.html
 
 <section id="plan">
   <h3>Welcome to PyCon Israel!</h3>

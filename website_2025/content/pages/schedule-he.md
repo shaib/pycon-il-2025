@@ -2,6 +2,7 @@ Title: תוכנית
 Slug: schedule
 Summary: זמנים ואולמות של הרצאות וסדנאות
 Lang: he
+
 page_number: 15
 
 <script type="text/javascript" src="https://cfp.pycon.org.il/pycon-2024/widgets/schedule.js"></script>
