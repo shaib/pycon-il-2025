@@ -32,7 +32,7 @@
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
 {% endblock head %}
-    <link rel="stylesheet" type="text/css" href="{{ main_siteurl }}/theme/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/screen.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/brands.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/solid.css">
@@ -43,7 +43,7 @@
 <body>
 
 <header class="site-header"
-    style="background-image: url('{{ SITEURL }}/theme/images/{{ HEADER_BACKGROUND }}');">
+    style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/{{ HEADER_BACKGROUND }}');">
     <nav role="navigation" class="nagivation navigation--main">
         <div class="container language-navigation-container">
         <div class="grid">
@@ -86,14 +86,24 @@
 		  </li>
 	        {% endfor %}
               {% endif %}
-                {% if lang_siteurls %}
+
+                {% set webpage = page or article %}
+                {% set translations = webpage and webpage.translations %}                  
+                {% if lang_siteurls or translations %}
                 <li class="lang-menu">
-                    {% for lang, url in lang_siteurls.items() %}
-                        <a class="lang-menu__item
-                            {% if lang == DEFAULT_LANG %}lang-menu-item--current{% endif %}"
-                            href="{{ url }}/">{{ lang }}</a>
+                  <a class="lang-menu__item lang-menu-item--current"
+                            href="#">{{ DEFAULT_LANG }}</a>              
+		  {% for translation in translations %}
+                    <a class="lang-menu__item"
+                            href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+                  {% else %}
+	            {# No specific translations, use links to home #}
+                    {% for lang, url in extra_siteurls.items() %}
+                      <a class="lang-menu__item"
+                         href="{{ url }}/">{{ lang }}</a>
                     {% endfor %}
-                    </ul>
+                  {% endfor %}
+                        
                 </li>
                 {% endif %}
             </ul>
