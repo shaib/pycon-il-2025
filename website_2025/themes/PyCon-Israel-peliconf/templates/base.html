@@ -50,7 +50,7 @@
         <div class="s-12 last">
             <a href="#" class="navigation-hamburger" id="js-navigation-hamburger"></a>
             {% if BRANDING_LINK %}
-                <a href="{{ BRANDING_LINK.0 }}" class="branding-link">
+                <a href="{{ BRANDING_LINK.0 or SITEURL }}" class="branding-link">
                     {% if BRANDING_LINK.1 %}
                         <img src="{{ main_siteurl }}/theme/images/{{ BRANDING_LINK.2 }}"
                             alt="{{ BRANDING_LINK.1 }}" />
