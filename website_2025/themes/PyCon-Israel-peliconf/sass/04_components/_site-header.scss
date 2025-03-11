@@ -147,8 +147,11 @@
             color: $yellow;
         }
 
-        &:last-child {
+        &:lang(en):last-child {
             margin-right: 0;
+        }
+        &:lang(he):last-child {
+            margin-left: 0;
         }
     }
 

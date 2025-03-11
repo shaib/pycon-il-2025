@@ -9,6 +9,8 @@ EVENT_CLAIM = (
     "programming language, related technologies, and their use."
 )
 
+HEADER_BACKGROUND = "pycon-2024-panel.jpg"
+
 BLOG_TITLE = "Updates"
 BLOG_SLUG = "updates"
 PAST_CONFS_TITLE = "Past PyCon Israel Conferences"
@@ -114,7 +116,11 @@ RELATIVE_URLS = True
 
 THEME = "themes/PyCon-Israel-peliconf"
 # STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
-BRANDING_LINK = (SITEURL, 'PyCon Israel 2025', 'PyConIL.png',)
+BRANDING_LINK = (
+    None,  # Use None for language-preserving link to home
+    'PyCon Israel 2025',
+    'PyConIL.png',
+)
 EVENT_CTA_BUTTONS = (
     ('Conference Tickets', 'https://www.eventbrite.com/', True),
     ('Dinner Tickets', 'https://www.eventbrite.com/', False),
