@@ -9,6 +9,8 @@ EVENT_CLAIM = (
     "programming language, related technologies, and their use."
 )
 
+HEADER_BACKGROUND = "pycon-2024-panel.jpg"
+
 BLOG_TITLE = "Updates"
 BLOG_SLUG = "updates"
 PAST_CONFS_TITLE = "Past PyCon Israel Conferences"
