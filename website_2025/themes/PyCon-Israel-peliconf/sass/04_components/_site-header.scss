@@ -173,6 +173,7 @@
 .page-heading {
     @include background-image(linear-gradient(to bottom right, $blueish, shade($blueish, 20)));
     color: $white;
+    background: $blue;
 }
 
 .page-heading__title {
