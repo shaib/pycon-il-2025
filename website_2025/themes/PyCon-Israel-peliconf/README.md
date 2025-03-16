@@ -6,6 +6,17 @@ the process of porting to more modern Sass.
 
 If you make any styling changes, see the Customization notes below.
 
+# Material changes from original theme
+
+PyCon is a little different... so we made some changes. In particular,
+we need better bilingual support (for an Italian conf, where the site
+is all in latin script anyway, it's not too bad that the blog shows
+up under "news"; with Hebrew, it needs to be translated).
+
+Importantly: We don't have "Social events" as such, but we do have
+"related events", and that's what we call it on the site and in the
+configuration.
+
 ## Attribution
 
 Peliconf was taken from https://github.com/wikey/peliconf

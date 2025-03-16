@@ -122,11 +122,35 @@ BRANDING_LINK = (
     'PyConIL.png',
 )
 EVENT_CTA_BUTTONS = (
-    ('Conference Tickets', 'https://www.eventbrite.com/', True),
-    ('Dinner Tickets', 'https://www.eventbrite.com/', False),
+    ('https://cfp.pycon.org.il/', True,
+     {'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'}),
+    ('#', False,
+     {'en': 'Buy Tickets', 'he': 'קניית כרטיסים'}),
 )
-# The option social events
-SOCIAL_EVENTS = []
+# The optional related events
+RELATED_EVENTS_TITLE = dict(
+    en="Related Events",
+    he="אירועים קשורים",
+)
+RELATED_EVENTS = [
+    dict(
+        title={'en': 'CFP Workshop', 'he': 'סדנת CFP'},
+        when={'en': 'TBD', 'he': 'יפורסם בהמשך'},
+        where={'en': 'TBD', 'he': 'יפורסם בהמשך'},
+        description={
+            'en': """
+            Considering submitting a talk? Join us for an online CFP Workshop.
+            Along with our experienced speakers and mentors -
+            we are looking forward to sharing some tips and best practices
+            on how to submit a Call For Proposals.""",
+            'he': """
+            חושבת או חושב להגיש הצעה? הצטרפו אלינו לסדנת CFP.
+            אנחנו, יחד עם דוברות ודוברים מנוסים, מנטורים ומנטוריות,
+            מצפים לחלוק עצות והדרכה לגבי הגשת הצעות.""",
+        },
+        map="https://www.openstreetmap.org/#map=13/32.09734/34.85533",
+    ),
+]
 # Sponsors
 EVENT_PARTNERS = {
     'diamond': [

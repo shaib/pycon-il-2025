@@ -1,9 +1,9 @@
 <div class="s-12 last">
     <section class="site-cta">
-    {% for label, url, primary  in EVENT_CTA_BUTTONS %}
-        <a href="{{ url }}"
-            class="btn btn--{% if primary %}primary{% else %}secondary{% endif %}">
-            {{ label }}
+    {% for url, active, label  in EVENT_CTA_BUTTONS %}
+        <a {% if active %} href="{{ url }}" {% endif %}
+           class="btn btn--{% if active %}primary{% else %}secondary{% endif %}">
+            {{ label[DEFAULT_LANG] }}
         </a>
     {% endfor %}
     </section>

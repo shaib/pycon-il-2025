@@ -9,16 +9,16 @@
         <div class="grid">
         <div class="s-12 last">
             <p class="event-date-location">
-            {% if EVENT_DATE %}
+            {% if PYCON.DATES %}
                 <span class="event-date-location__date">
                     <i class="mdi mdi-calendar"></i>
-                    {{ EVENT_DATE }}
+                    {{ PYCON.DATES[DEFAULT_LANG] }}
                 </span>
             {% endif %}
-            {% if EVENT_LOCATION %}
+            {% if PYCON.LOCATION %}
                 <span class="event-date-location__location">
                     <i class="mdi mdi-map-marker"></i>
-                    {{ EVENT_LOCATION }}
+                    {{ PYCON.LOCATION[DEFAULT_LANG] }}
                 </span>
             {% endif %}
             </p>
@@ -66,7 +66,7 @@
         <header class="site-news__header">
             <h2 class="small">
                 <i class="mdi mdi-newspaper"></i>
-                News
+                {{ BLOG_TITLE }}
             </h2>
         </header>
 
@@ -104,25 +104,27 @@
         <header class="site-socialevents__header">
             <h2 class="small">
                 <i class="mdi mdi-beer"></i>
-                Social Events
+                {{ RELATED_EVENTS_TITLE[DEFAULT_LANG] }}
             </h2>
         </header>
 
         <div class="socialevents-list">
-            {% for e in SOCIAL_EVENTS %}
+            {% for e in RELATED_EVENTS %}
             <div class="socialevent">
                 <div class="socialevent__content">
                     <p class="socialevent__info">
                         <span class="socialevent__when">
                             <i class="mdi mdi-calendar"></i>
-                            {{ e.when }}
+                            {{ e.when[DEFAULT_LANG] }}
                         </span>
-                        at
-                        <span class="socialevent__where">{{ e.where }}</span>
+                        <span class="socialevent__where">
+                            <i class="mdi mdi-map-marker"></i>
+                            {{ e.where[DEFAULT_LANG] }}
+                        </span>
                     </p>
-                    <h3 class="socialevent__title">{{ e.title }}</h3>
+                    <h3 class="socialevent__title">{{ e.title[DEFAULT_LANG] }}</h3>
                     <p class="socialevent__description">
-                        {{ e.description }}
+                        {{ e.description[DEFAULT_LANG] }}
                     </p>
                 </div>
                 <div class="socialevent__map">
