@@ -152,7 +152,7 @@ RELATED_EVENTS = [
     ),
 ]
 # Sponsors (peliconf)
-EVENT_PARTNERS = {
+EVENT_PARTNERS = {} and {
     'diamond': [
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
@@ -197,7 +197,7 @@ FOOTER_LINKS = [
 # Peliconf: main speakers. Tuple description:
 # 1. Speaker Name
 # 2. Speaker picture, if None a placeholder will be shown
-SPEAKERS = (
+SPEAKERS = () and (
     ('Carlo Ascani', 'speaker-male.png'),
     ('Mario Rossi', None),
     ('Carla Bianchi', 'speaker-female.png'),
