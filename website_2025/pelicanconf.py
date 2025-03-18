@@ -2,6 +2,7 @@ from  markdown.extensions.toc import slugify_unicode
 
 AUTHOR = 'PyCon Israel Team'
 SITENAME = 'PyCon Israel 2025'
+BIDI_DIR = 'ltr'
 SITEURL = ""
 
 EVENT_CLAIM = (
@@ -124,6 +125,8 @@ BRANDING_LINK = (
 EVENT_CTA_BUTTONS = (
     ('https://cfp.pycon.org.il/', True,
      {'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'}),
+    ('mailto:sponsors@pycon.org.il?subject=Sponsorship', True,
+     {'en': 'Become a Sponsor', 'he': 'יצירת קשר לחסויות'}),
     ('#', False,
      {'en': 'Buy Tickets', 'he': 'קניית כרטיסים'}),
 )
@@ -152,7 +155,7 @@ RELATED_EVENTS = [
     ),
 ]
 # Sponsors (peliconf)
-EVENT_PARTNERS = {
+EVENT_PARTNERS = {} and {
     'diamond': [
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
@@ -197,7 +200,7 @@ FOOTER_LINKS = [
 # Peliconf: main speakers. Tuple description:
 # 1. Speaker Name
 # 2. Speaker picture, if None a placeholder will be shown
-SPEAKERS = (
+SPEAKERS = () and (
     ('Carlo Ascani', 'speaker-male.png'),
     ('Mario Rossi', None),
     ('Carla Bianchi', 'speaker-female.png'),
@@ -324,6 +327,7 @@ PAGE_SELECTION_FILTER = get_page_number
 I18N_SUBSITES = {
     'he': {
         'SITENAME': 'פייקון ישראל 2025',
+        'BIDI_DIR': 'rtl',
         'EVENT_CLAIM': (
             'פייקון ישראל הוא כנס המוקדש לשפת התכנות פייתון, '
             'לטכנולוגיות הקשורות אליה, ולשימוש בהן'

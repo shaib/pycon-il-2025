@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{{ DEFAULT_LANG }}" dir="{{ BIDI_DIR }}">
 <head>
 {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
@@ -160,7 +160,7 @@
         </section>
         {% endif %}
         <p class="site-footer__copyright">
-            {{ COPYRIGHT }}
+            <bdi>{{ COPYRIGHT }}</bdi>
         </p>
     </div>
     </div>
