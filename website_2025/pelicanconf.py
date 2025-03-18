@@ -124,6 +124,8 @@ BRANDING_LINK = (
 EVENT_CTA_BUTTONS = (
     ('https://cfp.pycon.org.il/', True,
      {'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'}),
+    ('mailto:sponsors@pycon.org.il?subject=Sponsorship', True,
+     {'en': 'Become a Sponsor', 'he': 'יצירת קשר לחסויות'}),
     ('#', False,
      {'en': 'Buy Tickets', 'he': 'קניית כרטיסים'}),
 )
