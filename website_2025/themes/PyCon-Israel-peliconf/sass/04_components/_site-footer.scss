@@ -35,13 +35,16 @@
     }
 }
 
-.site-footer-navigation a {
+.site-footer-navigation {
     @include font-size(14);
     text-transform: uppercase;
     margin-right: $gutter;
     color: $almost-white;
 
-    &:hover {
-        color: $yellow;
+    a {
+        color: $almost-white;
+        &:hover {
+            color: $yellow;
+        }
     }
 }

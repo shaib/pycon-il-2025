@@ -129,14 +129,17 @@
     <div class="grid">
     <div class="s-12 m-12 l-7 last-s last-m">
         <nav class="site-footer-navigation">
-        {% for p in PAGES %}
+        {% for p in pages %}
         {% if p.nav == 'footer' %}
             <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         {% endif %}
         {% endfor %}
-        {% for label, url in FOOTER_LINKS %}
+        <p>
+          {{ FOOTER_LINKS_TITLE[DEFAULT_LANG] }}
+          {% for label, url in FOOTER_LINKS %}
             <a href="{{ url }}">{{ label }}</a>
-        {% endfor %}
+          {% endfor %}
+        </p>
         </nav>
     </div>
     <div class="s-12 m-12 l-5 last">

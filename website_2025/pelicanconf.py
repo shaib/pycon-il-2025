@@ -63,15 +63,15 @@ SOCIAL = (
     ("facebook", "https://www.facebook.com/pyconisrael/"),
     ("linkedin", "https://www.linkedin.com/company/pycon-israel/"),
     ("mastodon", "https://tooot.im/@pyconil/"),
+    ("github", "https://github.com/Hamakor/pycon-il-2025"),
 )
 SOCIAL_IN_FOOTER = True
 
 class PYCON:
-    """ Used in PyCon-Israel-Flex template, not yet in peliconf """
     YEAR = 2025
     DATES = {
         'en': "September 9, 2025",
-        'he': "09 בספטמבר 2025",
+        'he': "9 בספטמבר 2025",
     }
     TECH_DATE = "2025-09-09"
     LOCATION = {
@@ -80,9 +80,9 @@ class PYCON:
     }
     SPONSORSHIP_AVAILABLE = True
 
-# Peliconf parameters
-EVENT_DATE = '9/9/2025'
-EVENT_LOCATION = "Cinema City, Gelilot"
+# Peliconf parameters -- no longer used, see above
+# EVENT_DATE = '9/9/2025'
+# EVENT_LOCATION = "Cinema City, Gelilot"
 
 # PyConIL-flex
 SPONSOR_LEVELS = {
@@ -151,7 +151,7 @@ RELATED_EVENTS = [
         map="https://www.openstreetmap.org/#map=13/32.09734/34.85533",
     ),
 ]
-# Sponsors
+# Sponsors (peliconf)
 EVENT_PARTNERS = {
     'diamond': [
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
@@ -185,11 +185,14 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Additional links that will be placed in the footer navigation
 # Remember that you can put pages in the footer navigation using the :nav: footer meta
-FOOTER_LINKS = (
-    # Peliconf -- just to see
-    # Probably will break over bilingual
-    ('Code of Conduct', '/pages/CoC.html' ),
-)
+FOOTER_LINKS_TITLE = {
+    'en': 'Past conferences:',
+    'he': 'כנסים משנים קודמות:',
+}
+FOOTER_LINKS = [
+    (str(year), f'{PAST_CONF_BASE_URL}{year}/')
+    for year in PAST_CONF_YEARS
+]
 
 # Peliconf: main speakers. Tuple description:
 # 1. Speaker Name
