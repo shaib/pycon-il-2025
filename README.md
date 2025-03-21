@@ -115,7 +115,7 @@ for the bilingual strings:
 
 Other interesting files to look at:
 - Our use of the theme, and changes we made to the original, are explained
-  in `website_2024/themes/PyCon-Israel-peliconf/README.md`
+  in `website_2025/themes/PyCon-Israel-peliconf/README.md`
 - All (non-partial) templates extend
   `website_2025/themes/PyCon-Israel-peliconf/templates/base.html` -- that
   means that template defines structure for everything.
