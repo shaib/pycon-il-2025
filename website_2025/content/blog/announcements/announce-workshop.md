@@ -4,9 +4,7 @@ Summary: Pycon Israel 2025 CFP Workshop
 Lang: en
 date: 2025-04-07 20:05
 
-<span class="r1c1">
-    <img src="./content/images/workshop-post.png">
-</span>
+![Image of 2023 cfp workshop, with text for timing and speakers]({static}/images/workshop-post.png)
 
 #### Join our CFP Workshop
 Call for Proposals: CFP Workshop Invite!
