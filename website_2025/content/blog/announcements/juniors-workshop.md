@@ -1,8 +1,8 @@
-Title: PyCon Israel 2025 CFP Workshop
-Slug: announce-cfp-workshop
-Summary: Pycon Israel 2025 CFP Workshop
+Title: 4 Ideas for Junior Speakers’ Talks @ Pycon Israel 2025
+Slug: juniors-announce-cfp-workshop
+Summary: 4 Ideas for Junior Speakers’ Talks @ Pycon Israel 2025
 Lang: en
-date: 2025-04-07 20:05
+date: 2025-04-15 20:05
 
 ![Image of 2023 cfp workshop, with text for timing and speakers]({static}/images/junior-workshop.jpg)
 
