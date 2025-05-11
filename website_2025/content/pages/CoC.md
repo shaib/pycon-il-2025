@@ -3,6 +3,7 @@ Slug: code-of-conduct
 Summary: Be friendly, patient, welcoming and respectful; avoid harassment.
 Lang: en
 page_number: 50
+nav: footer
 
 All attendees, speakers, sponsors and volunteers at our conference are
 kindly asked to adopt the following code of conduct, and are required

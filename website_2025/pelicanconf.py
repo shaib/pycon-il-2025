@@ -2,12 +2,15 @@ from  markdown.extensions.toc import slugify_unicode
 
 AUTHOR = 'PyCon Israel Team'
 SITENAME = 'PyCon Israel 2025'
+BIDI_DIR = dict(en='ltr', he='rtl')
 SITEURL = ""
 
 EVENT_CLAIM = (
     "PyCon Israel is a conference dedicated to the Python "
     "programming language, related technologies, and their use."
 )
+
+HEADER_BACKGROUND = "pycon-2024-panel.jpg"
 
 BLOG_TITLE = "Updates"
 BLOG_SLUG = "updates"
@@ -61,15 +64,15 @@ SOCIAL = (
     ("facebook", "https://www.facebook.com/pyconisrael/"),
     ("linkedin", "https://www.linkedin.com/company/pycon-israel/"),
     ("mastodon", "https://tooot.im/@pyconil/"),
+    ("github", "https://github.com/Hamakor/pycon-il-2025"),
 )
 SOCIAL_IN_FOOTER = True
 
 class PYCON:
-    """ Used in PyCon-Israel-Flex template, not yet in peliconf """
     YEAR = 2025
     DATES = {
         'en': "September 9, 2025",
-        'he': "09 בספטמבר 2025",
+        'he': "9 בספטמבר 2025",
     }
     TECH_DATE = "2025-09-09"
     LOCATION = {
@@ -78,9 +81,9 @@ class PYCON:
     }
     SPONSORSHIP_AVAILABLE = True
 
-# Peliconf parameters
-EVENT_DATE = '9/9/2025'
-EVENT_LOCATION = "Cinema City, Gelilot"
+# Peliconf parameters -- no longer used, see above
+# EVENT_DATE = '9/9/2025'
+# EVENT_LOCATION = "Cinema City, Gelilot"
 
 # PyConIL-flex
 SPONSOR_LEVELS = {
@@ -114,15 +117,45 @@ RELATIVE_URLS = True
 
 THEME = "themes/PyCon-Israel-peliconf"
 # STYLESHEET_URL = "/theme/css/pycon-israel-2024.css"
-BRANDING_LINK = (SITEURL, 'PyCon Israel 2025', 'PyConIL.png',)
-EVENT_CTA_BUTTONS = (
-    ('Conference Tickets', 'https://www.eventbrite.com/', True),
-    ('Dinner Tickets', 'https://www.eventbrite.com/', False),
+BRANDING_LINK = (
+    None,  # Use None for language-preserving link to home
+    'PyCon Israel 2025',
+    'PyConIL.png',
 )
-# The option social events
-SOCIAL_EVENTS = []
-# Sponsors
-EVENT_PARTNERS = {
+EVENT_CTA_BUTTONS = (
+    ('https://cfp.pycon.org.il/pycon-2025/cfp', False,
+     {'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'}),
+    ('mailto:sponsors@pycon.org.il?subject=Sponsorship', True,
+     {'en': 'Become a Sponsor', 'he': 'יצירת קשר לחסויות'}),
+    ('#', False,
+     {'en': 'Buy Tickets', 'he': 'קניית כרטיסים'}),
+)
+# The optional related events
+RELATED_EVENTS_TITLE = dict(
+    en="Related Events",
+    he="אירועים קשורים",
+)
+RELATED_EVENTS = [
+    dict(
+        title={'en': 'CFP Workshop', 'he': 'סדנת CFP'},
+        when={'en': '21.4 17:30', 'he': '21.4 17:30'},
+        where={
+            'en': 'Bluevine, Yigal Alon 94 Tel Aviv, Floor 24',
+            'he': 'משרדי Bluevine, יגאל אלון 94 תל אביב, קומה 24'},
+        description={
+            'en': """
+            The workshop included talks and personal discussions,
+            to help potential submitters become successful speakers.
+            See you at the conference, and next year!""",
+            'he': """
+            הסדנה כללה הרצאות ושיחות פרטניות, כדי לעזור למגישות ומגישים פוטנציאליים
+            להגיע להרצאה מוצלחת בכנס. להתראות בכנס, ובשנה הבאה!""",
+        },
+        map="https://www.openstreetmap.org/#map=13/32.09734/34.85533",
+    ),
+]
+# Sponsors (peliconf)
+EVENT_PARTNERS = {} and {
     'diamond': [
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
         ('Sponsor', 'http://www.carlorat.me/', 'logo-sponsor.png'),
@@ -155,16 +188,19 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Additional links that will be placed in the footer navigation
 # Remember that you can put pages in the footer navigation using the :nav: footer meta
-FOOTER_LINKS = (
-    # Peliconf -- just to see
-    # Probably will break over bilingual
-    ('Code of Conduct', '/pages/CoC.html' ),
-)
+FOOTER_LINKS_TITLE = {
+    'en': 'Past conferences:',
+    'he': 'כנסים משנים קודמות:',
+}
+FOOTER_LINKS = [
+    (str(year), f'{PAST_CONF_BASE_URL}{year}/')
+    for year in PAST_CONF_YEARS
+]
 
 # Peliconf: main speakers. Tuple description:
 # 1. Speaker Name
 # 2. Speaker picture, if None a placeholder will be shown
-SPEAKERS = (
+SPEAKERS = () and (
     ('Carlo Ascani', 'speaker-male.png'),
     ('Mario Rossi', None),
     ('Carla Bianchi', 'speaker-female.png'),

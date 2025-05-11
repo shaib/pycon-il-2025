@@ -25,8 +25,11 @@
     .btn {
         margin-right: $gutter;
 
-        &:last-child {
+        &:dir(ltr):last-child {
             margin-right: 0;
+        }
+        &:dir(rtl):last-child {
+            margin-left: 0;
         }
     }
 }
@@ -66,7 +69,12 @@
     }
 
     ul {
-        float: right;
+        &:dir(rtl) {
+            float: right;
+        }
+        &:dir(ltr) {
+            float: left;
+        }
     }
 
     li {
@@ -147,8 +155,11 @@
             color: $yellow;
         }
 
-        &:last-child {
+        &:dir(ltr):last-child {
             margin-right: 0;
+        }
+        &:dir(rtl):last-child {
+            margin-left: 0;
         }
     }
 
@@ -170,6 +181,7 @@
 .page-heading {
     @include background-image(linear-gradient(to bottom right, $blueish, shade($blueish, 20)));
     color: $white;
+    background: $blue;
 }
 
 .page-heading__title {
