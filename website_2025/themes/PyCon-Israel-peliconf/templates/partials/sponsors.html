@@ -22,3 +22,13 @@
 </a>
 {# </div> #}
 {% endmacro %}
+
+{% macro sponsor_logo_for_home(page) %}
+{# <div class="sp-level"> #}
+<a href="{{ page.url }}" class="sp-just-logo">
+    <div class="sp-logo">
+        <img src="{{ main_siteurl }}/images/sponsor-logos/{{ page.sp_logo }}" alt="{{ page.title }} Logo" title="{{ page.summary | striptags }}">
+    </div>
+</a>
+{# </div> #}
+{% endmacro %}
