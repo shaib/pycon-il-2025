@@ -99,12 +99,16 @@ def speaker_is_fake(speaker):
     return email.startswith('cfp+') and email.endswith('@pycon.org.il')
 
 
-def filter_speakers(speakers, talks):
+def filter_speakers(speakers, talks, exclude_workshops=True):
 
     accepted_talks = [t['code'] for t in talks if t['state'] == 'confirmed']
     keynote_talks = [
         t['code'] for t in talks
         if t['state'] == 'confirmed' and 'Keynote' in t['submission_type'].values()
+    ]
+    workshops = [
+        t['code'] for t in talks
+        if any('workshop' in ty for ty in t['submission_type'].values())
     ]
 
     accepted = []
@@ -113,6 +117,8 @@ def filter_speakers(speakers, talks):
             if talk in accepted_talks and not speaker_is_fake(speaker):
                 if talk in keynote_talks:
                     speaker['keynote'] = True
+                if exclude_workshops and talk in workshops:
+                    continue
                 accepted.append(speaker)
 
     print('-----')
