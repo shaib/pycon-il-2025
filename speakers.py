@@ -131,13 +131,25 @@ def filter_speakers(speakers, talks, exclude_workshops=True):
     return accepted
 
 
-SPAKERS_MD = """Title: Speakers
+UPDATE_TIME=datetime.now().astimezone()
+
+SPEAKERS_HEADER_EN = f"""Title: Speakers
 Slug: speakers
 Template: page
 Lang: en
 page_number: 17
-modified: {modified}
+modified: {UPDATE_TIME}
+"""
 
+SPEAKERS_HEADER_HE = f"""Title: דוברות ודוברים
+Slug: speakers
+Template: page
+Lang: he
+page_number: 17
+modified: {UPDATE_TIME}
+"""
+
+SPEAKERS_CONTENT="""
 <style>
     body {{
         font-family: Arial, sans-serif;
@@ -312,10 +324,9 @@ def generate_speakers_page(speakers):
     keynotes_html = '\n'.join(keynotes_list)
     speakers_html = '\n'.join(speakers_list)
 
-    return SPAKERS_MD.format(
+    return SPEAKERS_CONTENT.format(
         keynotes=keynotes_html,
         speakers=speakers_html,
-        modified=datetime.now().astimezone(),
     )
 
 
@@ -339,10 +350,14 @@ if __name__ == "__main__":
     # output = Path('speakers.json')
     # save_json(accepted_speakers, output)
 
-    md_file = generate_speakers_page(accepted_speakers)
+    md_content = generate_speakers_page(accepted_speakers)
     if args.output:
         with open(args.output, 'w', encoding='utf-8') as f:
-            f.write(md_file)
+            f.write(SPEAKERS_HEADER_EN + md_content)
+        p = Path(args.output)
+        stem_he = p.stem + "_he"
+        with open(p.with_stem(stem_he), 'w', encoding='utf-8') as f:
+            f.write(SPEAKERS_HEADER_HE + md_content)
     else:
-        print(md_file)
+        print(md_content)
 
