@@ -135,9 +135,11 @@ class Button:
 
 
 EVENT_CTA_BUTTONS = (
-    Button(href='https://cfp.pycon.org.il/pycon-2025/cfp', active=False,
-           label={'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'},
-           tooltip={'en': 'The call for proposals is closed', 'he': 'הקריאה להצעות כבר נסגרה'}),
+    # Button(href='https://cfp.pycon.org.il/pycon-2025/cfp', active=False,
+    #        label={'en': 'Propose Content', 'he': 'הגשת הצעות תוכן'},
+    #        tooltip={'en': 'The call for proposals is closed', 'he': 'הקריאה להצעות כבר נסגרה'}),
+    Button(href='https://cfp.pycon.org.il/pycon-2025/schedule', active=True,
+           label={'en': 'Agenda', 'he': 'תוכנית הכנס'}),
     Button(href='mailto:sponsors@pycon.org.il?subject=Sponsorship',
            label={'en': 'Become a Sponsor', 'he': 'יצירת קשר לחסויות'}),
     Button(href='#', active=False,
