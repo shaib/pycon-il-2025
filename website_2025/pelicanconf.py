@@ -83,6 +83,29 @@ class PYCON:
     }
     SPONSORSHIP_AVAILABLE = True
 
+# PyConIL-flex style sponsors
+SPONSOR_LEVELS = {
+    '10-diamond': {
+        'class': "sp-diamond",
+        'name': {"en": "Diamond Sponsors", "he": "חסות יהלום" },
+        },
+    '20-gold': {
+        'class': "sp-gold",
+        'name': {"en": "Gold Sponsors", "he": "חסות זהב" },
+        },
+    '30-silver': {
+        'class': "sp-silver",
+        'name': {"en": "Silver Sponsors", "he": "חסות כסף" },
+        },
+    '40-friends': {
+        'class': "sp-friends",
+        'name': {"en": "Friend Sponsors", "he": "חסות ידידים" },
+        },
+    '50-partners': {
+        'class': "sp-partner",
+        'name': {"en": "Community Partners", "he": "שותפים וקהילה" },
+        },
+}
 
 DEFAULT_PAGINATION = False
 DISABLE_URL_HASH = True
