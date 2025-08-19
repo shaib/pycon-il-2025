@@ -14,6 +14,7 @@ EVENT_CLAIM = (
 HEADER_BACKGROUND = "pycon-2024-panel.jpg"
 
 BLOG_TITLE = "Updates"
+BLOG_ALL = "All Updates"
 BLOG_SLUG = "updates"
 SPONSORS_TITLE = "Sponsors and Partners"
 PAST_CONFS_TITLE = "Past PyCon Israel Conferences"
@@ -233,6 +234,7 @@ I18N_SUBSITES = {
             'לטכנולוגיות הקשורות אליה, ולשימוש בהן'
         ),
         'BLOG_TITLE': 'עדכונים',
+        'BLOG_ALL': 'כל העדכונים',
         'PAST_CONFS_TITLE': "כנסי פייקון ישראל קודמים",
         'SPONSORS_TITLE': "חסויות ושותפים",
 
