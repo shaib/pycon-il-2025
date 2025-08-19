@@ -71,7 +71,7 @@
         </header>
 
         <ol class="news-list">
-            {% for article in articles_page.object_list %}
+            {% for article in articles_page.object_list[:5] %}
             <li>
                 <article class="news-article">
                     <aside class="news-article__aside">

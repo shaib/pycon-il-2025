@@ -149,6 +149,24 @@ RELATED_EVENTS_TITLE = dict(
 )
 RELATED_EVENTS = [
     dict(
+        title={'en': 'PyCon Israel Workshops', 'he': 'סדנאות פייקון ישראל'},
+        when={'en': '10.9, 09:00 and 13:00', 'he': '10.9, 9:00 ו־13:00'},
+        where={
+            'en': 'Reichman University, Psychology Building, Seminar room 101',
+            'he': 'אוניברסיטת רייכמן, בניין פסיכולוגיה, חדר סמינרים 101'},
+        description={
+            'en': """
+            Long sessions of intense learning by guided work,
+            in small classes of up to 25 students. To attend, you need
+            to buy a ticket.""",
+            'he': """
+            סשנים ארוכים של לימוד מעמיק דרך עבודה מודרכת,
+            בכיתות קטנות של עד כ־25 תלמידות ותלמידים.
+            כדי לההשתתף, יש לרכוש כרטיס.""",
+        },
+        map="https://www.openstreetmap.org/way/365951344",
+    ),
+    dict(
         title={'en': 'CFP Workshop', 'he': 'סדנת CFP'},
         when={'en': '21.4 17:30', 'he': '21.4 17:30'},
         where={
@@ -163,7 +181,7 @@ RELATED_EVENTS = [
             הסדנה כללה הרצאות ושיחות פרטניות, כדי לעזור למגישות ומגישים פוטנציאליים
             להגיע להרצאה מוצלחת בכנס. להתראות בכנס, ובשנה הבאה!""",
         },
-        map="https://www.openstreetmap.org/#map=13/32.09734/34.85533",
+        map="https://www.openstreetmap.org/#map=18/32.068870/34.793530",
     ),
 ]
 
